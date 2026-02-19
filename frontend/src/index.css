@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+input, textarea, select, button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  form {
+    padding: 10px !important;
+  }
+
+  ul {
+    gap: 8px !important;
+  }
+}
