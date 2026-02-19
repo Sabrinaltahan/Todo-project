@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+ ## Project Description
+This project built with React and TypeScript. 
+Express backend API and demonstrates full CRUD functionality for a Todo list.
+The project was created as part of a course assignment to demonstrate:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+State management in React
+Dynamic data fetching using useEffect
+Form handling with validation
+CRUD operations with REST API
+TypeScript type safety
+Error handling and loading states
+Responsive design
 
-Currently, two official plugins are available:
+## Tech Stack
+## 1-Frontend
+React
+TypeScript
+Vite
+Fetch API
+CSS (responsive design)
+## 2-Backend
+Node.js
+Express
+CORS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+1- Create
+Add a new todo
+Title must be at least 3 characters
+Description max 200 characters
+Default status: "Ej påbörjad"
 
-## React Compiler
+ 2- Read
+Fetch all todos using useEffect
+Display todos dynamically
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3- Update
+Update todo status:
+Ej påbörjad
+Pågående
+Avklarad
 
-## Expanding the ESLint configuration
+4- Delete
+Remove a todo from the list
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+5- Error Handling
+API error messages displayed to user
+Retry option when fetch fails
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+6- Loading State
+Loading indicator while fetching data
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## project structure:
+todo-project/
+│
+├── backend/
+│   ├── index.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── client.ts
+│   │   ├── components/
+│   │   │   ├── TodoForm.tsx
+│   │   │   └── TodoList.tsx
+│   │   ├── types/
+│   │   │   └── todo.ts
+│   │   └── App.tsx
+│   └── package.json
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Installation
+1-start backend: 
+cd backend
+npm install
+npm run dev
+runs on : http://localhost:4000
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2-start frontend 
+cd frontend 
+npm install
+npm run dev
+runs on : http://localhost:5173
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+API Endpoints:
+GET:  GET/ todos
+POST: POST/ todos
+PUT: PUT/ todos/ :id
+DELETE: DELETE/ todos/:id
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Developed by : Sabrin Altahan
+
+Github link: https://github.com/Sabrinaltahan/Todo-project.git
+
+Frontend APP:
+
+Backend API:
